@@ -26,3 +26,10 @@ vim.keymap.set("n", "<leader>fb", ":Telescope buffers<cr>", { noremap = true, si
 vim.keymap.set("n", "<leader>fo", ":Telescope vim_options<cr>", { noremap = true, silent = true, desc = "vim options" })
 vim.keymap.set("n", "<leader>fk", ":Telescope keymaps<cr>", { noremap = true, silent = true, desc = "keymaps" })
 vim.keymap.set("n", "<leader>fr", ":Telescope registers<cr>", { noremap = true, silent = true, desc = "registers" })
+
+
+-- Movements
+vim.keymap.set({ "n", "v" }, "gs", "^", { noremap = true, silent = true, desc = "start of line (non ws)" })
+vim.keymap.set({ "n", "v" }, "gS", "0", { noremap = true, silent = true, desc = "start of line" })
+vim.keymap.set({ "n", "v" }, "ge", "g_", { noremap = true, silent = true, desc = "end of line (non ws)" })
+vim.keymap.set({ "n", "v" }, "gE", "$", { noremap = true, silent = true, desc = "end of line" })
