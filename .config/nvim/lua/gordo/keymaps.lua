@@ -18,3 +18,11 @@ vim.keymap.set("n", "<leader>tn", ":tabnew<cr>", { noremap = true, silent = true
 vim.keymap.set("n", "<leader>td", ":tabclose<cr>", { noremap = true, silent = true, desc = "close" })
 vim.keymap.set("n", "<tab>", ":tabnext<cr>", { noremap = true, silent = true, desc = "next tab" })
 vim.keymap.set("n", "<s-tab>", ":tabprevious<cr>", { noremap = true, silent = true, desc = "previous tab" })
+
+-- Telescope
+vim.keymap.set("n", "<leader>ff", ":Telescope find_files<cr>", { noremap = true, silent = true, desc = "files" })
+vim.keymap.set("n", "<leader>ft", ":Telescope live_grep<cr>", { noremap = true, silent = true, desc = "grep" })
+vim.keymap.set("n", "<leader>fb", ":Telescope buffers<cr>", { noremap = true, silent = true, desc = "buffers" })
+vim.keymap.set("n", "<leader>fo", ":Telescope vim_options<cr>", { noremap = true, silent = true, desc = "vim options" })
+vim.keymap.set("n", "<leader>fk", ":Telescope keymaps<cr>", { noremap = true, silent = true, desc = "keymaps" })
+vim.keymap.set("n", "<leader>fr", ":Telescope registers<cr>", { noremap = true, silent = true, desc = "registers" })
