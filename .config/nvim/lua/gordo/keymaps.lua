@@ -10,3 +10,4 @@ vim.keymap.set("n", "<leader>ws", ":vsplit<cr>", { noremap = true, silent = true
 vim.keymap.set("n", "<leader>wh", ":split<cr>", { noremap = true, silent = true, desc = "split horizontal"})
 vim.keymap.set("n", "<leader>wq", "<c-w>q", { noremap = true, silent = true, desc = "close"})
 vim.keymap.set("n", "<leader>wo", "<c-w>o", { noremap = true, silent = true, desc = "close others"})
+vim.keymap.set("n", "<leader>wa", ":qa<cr>", { noremap = true, silent = true, desc = "close all"})
