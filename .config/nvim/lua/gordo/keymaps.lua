@@ -27,9 +27,19 @@ vim.keymap.set("n", "<leader>fo", ":Telescope vim_options<cr>", { noremap = true
 vim.keymap.set("n", "<leader>fk", ":Telescope keymaps<cr>", { noremap = true, silent = true, desc = "keymaps" })
 vim.keymap.set("n", "<leader>fr", ":Telescope registers<cr>", { noremap = true, silent = true, desc = "registers" })
 
-
 -- Movements
 vim.keymap.set({ "n", "v" }, "gs", "^", { noremap = true, silent = true, desc = "start of line (non ws)" })
 vim.keymap.set({ "n", "v" }, "gS", "0", { noremap = true, silent = true, desc = "start of line" })
 vim.keymap.set({ "n", "v" }, "ge", "g_", { noremap = true, silent = true, desc = "end of line (non ws)" })
 vim.keymap.set({ "n", "v" }, "gE", "$", { noremap = true, silent = true, desc = "end of line" })
+vim.keymap.set("n", "<c-s-k>", ":move -2<CR>==", { noremap = true, silent = true, desc = "move line up" })
+vim.keymap.set("n", "<c-s-j>", ":move +<CR>==", { noremap = true, silent = true, desc = "move line down" })
+vim.keymap.set("x", "<c-s-k>", ":move '<-2<CR>gv=gv", { noremap = true, silent = true, desc = "move line(s) up" })
+vim.keymap.set("x", "<c-s-j>", ":move '>+<CR>gv=gv", { noremap = true, silent = true, desc = "move line(s) down" })
+
+-- Don't overwrite register on paste
+vim.keymap.set("x", "p", '"_dP', { noremap = true, silent = true, desc = "move line(s) down" })
+
+-- Stay in visual mode after indenting
+vim.keymap.set("v", "<", "<gv", { noremap = true, silent = true, desc = "indent left" })
+vim.keymap.set("v", ">", ">gv", { noremap = true, silent = true, desc = "indent right" })
