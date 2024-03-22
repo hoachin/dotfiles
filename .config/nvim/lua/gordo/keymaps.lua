@@ -13,13 +13,13 @@ vim.keymap.set("n", "<leader>wo", "<c-w>o", { noremap = true, silent = true, des
 vim.keymap.set("n", "<leader>wa", ":qa<cr>", { noremap = true, silent = true, desc = "close all"})
 -- window resizing keymaps defined in smart-splits plugin
 
--- Tabs
+-- Tabe
 vim.keymap.set("n", "<leader>tn", ":tabnew<cr>", { noremap = true, silent = true, desc = "new" })
 vim.keymap.set("n", "<leader>td", ":tabclose<cr>", { noremap = true, silent = true, desc = "close" })
 vim.keymap.set("n", "<tab>", ":tabnext<cr>", { noremap = true, silent = true, desc = "next tab" })
 vim.keymap.set("n", "<s-tab>", ":tabprevious<cr>", { noremap = true, silent = true, desc = "previous tab" })
 
--- Telescope
+-- telescope
 vim.keymap.set("n", "<leader>ff", ":Telescope find_files<cr>", { noremap = true, silent = true, desc = "files" })
 vim.keymap.set("n", "<leader>ft", ":Telescope live_grep<cr>", { noremap = true, silent = true, desc = "grep" })
 vim.keymap.set("n", "<leader>fb", ":Telescope buffers<cr>", { noremap = true, silent = true, desc = "buffers" })
@@ -36,6 +36,7 @@ vim.keymap.set("n", "<c-s-k>", ":move -2<CR>==", { noremap = true, silent = true
 vim.keymap.set("n", "<c-s-j>", ":move +<CR>==", { noremap = true, silent = true, desc = "move line down" })
 vim.keymap.set("x", "<c-s-k>", ":move '<-2<CR>gv=gv", { noremap = true, silent = true, desc = "move line(s) up" })
 vim.keymap.set("x", "<c-s-j>", ":move '>+<CR>gv=gv", { noremap = true, silent = true, desc = "move line(s) down" })
+vim.keymap.set("n", "<c-i>", "<c-I>", { noremap = true, silent = true, desc = "next jump" })
 
 -- Don't overwrite register on paste
 vim.keymap.set("x", "p", '"_dP', { noremap = true, silent = true, desc = "move line(s) down" })
@@ -43,3 +44,7 @@ vim.keymap.set("x", "p", '"_dP', { noremap = true, silent = true, desc = "move l
 -- Stay in visual mode after indenting
 vim.keymap.set("v", "<", "<gv", { noremap = true, silent = true, desc = "indent left" })
 vim.keymap.set("v", ">", ">gv", { noremap = true, silent = true, desc = "indent right" })
+
+-- Flash
+vim.keymap.set({ "n", "x", "o" }, "f", function() require("flash").jump() end, { noremap = true, silent = true, desc = "flash" })
+vim.keymap.set({ "n", "x", "o" }, ";", function() require("flash").jump({ continue = true }) end, { noremap = true, silent = true, desc = "flash" })
