@@ -24,6 +24,9 @@ setopt appendhistory
 setopt INC_APPEND_HISTORY  
 setopt SHARE_HISTORY
 
+export SHELL=/bin/zsh
+eval $(keychain --eval --quiet ~/.config/ssh/id_ed25519)
+
 PATH="$PATH:$HOME/go/bin"
 
 # Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
