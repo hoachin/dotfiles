@@ -13,7 +13,7 @@ vim.keymap.set("n", "<leader>wo", "<c-w>o", { noremap = true, silent = true, des
 vim.keymap.set("n", "<leader>wa", ":qa<cr>", { noremap = true, silent = true, desc = "close all"})
 -- window resizing keymaps defined in smart-splits plugin
 
--- Tabe
+-- Tabs
 vim.keymap.set("n", "<leader>tn", ":tabnew<cr>", { noremap = true, silent = true, desc = "new" })
 vim.keymap.set("n", "<leader>td", ":tabclose<cr>", { noremap = true, silent = true, desc = "close" })
 vim.keymap.set("n", "<tab>", ":tabnext<cr>", { noremap = true, silent = true, desc = "next tab" })
@@ -48,3 +48,6 @@ vim.keymap.set("v", ">", ">gv", { noremap = true, silent = true, desc = "indent 
 -- Flash
 vim.keymap.set({ "n", "x", "o" }, "f", function() require("flash").jump() end, { noremap = true, silent = true, desc = "flash" })
 vim.keymap.set({ "n", "x", "o" }, ";", function() require("flash").jump({ continue = true }) end, { noremap = true, silent = true, desc = "flash" })
+
+-- Neotree
+vim.keymap.set("n", "<leader>fe", ":Neotree toggle<cr>", { noremap = true, silent = true, desc = "neotree (root dir)" })
