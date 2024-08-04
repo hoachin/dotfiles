@@ -28,8 +28,8 @@ local options = {
 	undofile = true, -- create undo files
 	clipboard = "unnamedplus", -- use system clipboard
 
-	scrolloff = 10, -- keep 8 lines above/below cursor when scrolling
-	sidescrolloff = 15, -- keep 8 columns to left/right of cursor when scrolling
+	scrolloff = 10, -- keep 10 lines above/below cursor when scrolling
+	sidescrolloff = 15, -- keep 15 columns to left/right of cursor when scrolling
 	mouse = "a", -- enable mouse
 
 }
