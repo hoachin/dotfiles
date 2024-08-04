@@ -3,7 +3,6 @@ return {
   branch = "v3.x",
   config = function()
     local lsp_zero = require("lsp-zero")
-    lsp_zero.extend_lspconfig()
 
     lsp_zero.on_attach(
       function(_, bufnr)
@@ -20,7 +19,6 @@ return {
           local lua_opts = lsp_zero.nvim_lua_ls()
           require("lspconfig").lua_ls.setup(lua_opts)
         end,
-        zls = lsp_zero.default_setup,
       },
     })
 
